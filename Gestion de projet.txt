@@ -41,4 +41,10 @@
  - Bonnes pratiques dans le code PHP ET JS : MVC (différents dossiers du PHP comme vu en cours), DRY (pas de copier coller selon les données déjà présentes, un peu de futurproof), etc ( vous pouvez venir me demander pour des ressources)
  - Bonnes pratiques pour l’api renvoyant du JSON : REST ( vous pouvez venir de demander
 
-
+Une fiche de description README.md contenant les éléments suivants : 
+• Nom et prénom des participants
+• Les fonctionnalité réalisées
+• Bonus tentés
+• Url vers le repository GitHub où est hébergé votre code
+• Archive de votre projet (Si GitHub ne marche pas)
+• Url de votre site en ligne si vous l’avez mis en ligne
