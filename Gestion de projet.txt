@@ -1,0 +1,44 @@
+ //================\\
+|| ----- HTML ----- ||
+ \\================//
+
+• HTML Home Page (boutons, logo)
+• Maquette Stats Mensuelles
+• Maquette Stats Streamer
+• HTML Stats Mensuelles (Header, titre des parties [Nom des maquettes, i.e. "Max viewer"], sélection mois)
+• HTML Stats Streamer (Barre de recherche, Header, titre des parties [Nom des maquettes, i.e. "Max viewer"])
+
+ //===============\\
+|| ----- PHP----- ||
+ \\===============//
+
+• Récupérer les données de la base MySQL
+• Créer API qui renvoie un JSON par rapport aux données de la BDD (comment on fait une API ?????????????????????)
+• Ajout données via Twitch API
+• Ajouter des endpoints (URL type : sitedemerde.com/user)
+
+ //================\\
+|| ------ JS ------ ||
+ \\================//
+
+• Graphiques avec GraphJS :
+ - Graphiques de données d'un streamer (comparaison sur une durée)
+ - Graphiques de données entre les streamers pour un mois donné ( i.e. Antoine Daniel vs Zera vs ... sur Max Viewer)
+ - Vérifier la possibilité d'afficher ou non un streamer sur le graphique
+
+ //=================\\
+|| ----- Bonus ----- ||
+ \\=================//
+
+• Mettre en place le CSS (cf. maquettes)
+
+ //===================\\
+|| ----- Overall ----- ||
+ \\===================//
+
+• Qualité de code :
+ - Fonctionnalités du site par rapport au sujet
+ - Bonnes pratiques dans le code PHP ET JS : MVC (différents dossiers du PHP comme vu en cours), DRY (pas de copier coller selon les données déjà présentes, un peu de futurproof), etc ( vous pouvez venir me demander pour des ressources)
+ - Bonnes pratiques pour l’api renvoyant du JSON : REST ( vous pouvez venir de demander
+
+
