@@ -1,5 +1,3 @@
-﻿SAE S02.01 – Développement d’applications
-
 HERR Maximilien – MURE Florian – CHALMANDRIER Lucas
 
 # SAE S02.01 – Développement d’applications
