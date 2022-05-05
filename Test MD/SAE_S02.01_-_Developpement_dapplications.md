@@ -1,7 +1,6 @@
 ﻿SAE S02.01 – Développement d’applications
 
-7
-![](Aspose.Words.672fb9a6-164e-46fb-a3b2-f769e2ffe4a6.001.jpeg)![](Aspose.Words.672fb9a6-164e-46fb-a3b2-f769e2ffe4a6.002.png)![](Aspose.Words.672fb9a6-164e-46fb-a3b2-f769e2ffe4a6.003.png)HERR Maximilien – MURE Florian – CHALMANDRIER Lucas
+HERR Maximilien – MURE Florian – CHALMANDRIER Lucas
 
 # SAE S02.01 – Développement d’applications
 ## Comment matérialiser le dérèglement climatique, à travers des graphiques ’’parlants’’ ?
