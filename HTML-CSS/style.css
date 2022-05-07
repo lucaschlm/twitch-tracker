@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&display=swap%22");
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;600&display=swap%22");
+
+* {
+    margin: 0;
+    padding: 0;    
+    background-color: #18181B;
+
+}
+
+/* Header */
+
+header {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0% 55%;
+}
+
+/* Menu navigation */
+/* ====================================== */
+#logonav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vw;
+}
+
+.menu {
+    width: 75vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 150px;
+    padding-top: 25px;
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+.menu a {
+    text-decoration: none;
+    font-family: "Catamaran", sans-serif;
+    font-size: 3.5vh;
+    font-weight: 600;
+    color: #fff
+}
+
+/* Tableau de données/stats */
+main {
+    margin: 15vh 10vw;
+    padding: 2vh;
+    background-color: #EB5D1B;
+}
+
+.titresTab {
+    background-color: #EB5D1B;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titresTab li {
+    list-style-type: none;
+}
+
+.titresTab p {
+    
+    background-color: #EB5D1B;
+    text-decoration: none;
+    font-family: "Catamaran", sans-serif;
+    font-size: 2vh;
+    font-weight: 600;
+    color: #fff
+}

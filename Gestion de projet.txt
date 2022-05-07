@@ -14,7 +14,6 @@
 
 • Récupérer les données de la base MySQL
 • Créer API qui renvoie un JSON par rapport aux données de la BDD (comment on fait une API ?????????????????????)
-• Ajout données via Twitch API
 • Ajouter des endpoints (URL type : sitedemerde.com/user)
 
  //================\\
@@ -25,6 +24,7 @@
  - Graphiques de données d'un streamer (comparaison sur une durée)
  - Graphiques de données entre les streamers pour un mois donné ( i.e. Antoine Daniel vs Zera vs ... sur Max Viewer)
  - Vérifier la possibilité d'afficher ou non un streamer sur le graphique
+• Ajout données via Twitch API
 
  //=================\\
 || ----- Bonus ----- ||
