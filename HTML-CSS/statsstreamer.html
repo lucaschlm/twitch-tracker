@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title>Twitch Tracking IUT</title>
   <link rel="stylesheet" href="./style.css">
+  
 
 </head>
 
@@ -29,6 +30,7 @@
   </header>
 
   <div class="content">
+    <canvas id="myChart"></canvas>
     <input id="searchStreamer" class="searchbar" type="text" name="search" placeholder="Recherche ton streamer préféré ...">
     <h1>Temps streamé (h)</h1>
     <div class="graph"></div>
@@ -51,7 +53,11 @@
   <footer>
 
   </footer>
-  <script type="text/javascript" src="scripts/statsstreamer.js"></script>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="scripts/statsstreamer.js"></script>
+
+  
 </body>
 
 </html>
