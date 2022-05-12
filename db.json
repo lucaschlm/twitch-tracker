@@ -1,0 +1,9 @@
+{
+  "streamerList": [
+    { "id": 1, "name": "" }
+  ],
+  "Zerator": [
+    { "date": "12/05/2022","minutes_streamed": 1500, "rank": 1, "avg_viewers": 50, "max_viewers": 150, "hours_watched": 200, "followers": 800, "views": 15000, "followers_total": 1200, "views_total": 18000 },
+    { "date": "12/06/2022","minutes_streamed": 1500, "rank": 1, "avg_viewers": 50, "max_viewers": 150, "hours_watched": 200, "followers": 800, "views": 15000, "followers_total": 1200, "views_total": 18000 }
+  ]
+}
