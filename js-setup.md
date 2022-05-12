@@ -1,4 +1,4 @@
-# Mise en place JS
+# Mise en place JS (dépendances)
 
 - ## json-server pour avoir un json-preview
 
