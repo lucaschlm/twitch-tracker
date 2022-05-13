@@ -37,7 +37,7 @@ const config = {
   options: {}
 };
 
-const myChart = new Chart(document.getElementById("myChart"), config);
+const myChart = new Chart(document.getElementById("chartStreamedTime"), config);
 
 // const update = () => {
 //     axios.get("");
