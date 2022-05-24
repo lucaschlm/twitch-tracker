@@ -13,10 +13,15 @@
    
    • [https://twitchtracking.maximilienherr.web-edu.fr/index.php/steamerDate/[MMAAAA]](https://twitchtracking.maximilienherr.web-edu.fr/index.php/streamerDate/052022)
    
+- Sur ces deux pages, un script JS récupère les données envoyés en JSON par l'API pour ensuite faire les graphiques.
 # Bonus tentés
 
-- Réalisation du CSS (C’est pas fou, mais c’est mieux que de l’écrit noir sur fond blanc)
-#
+- Réalisation du CSS (C’est pas la folie, mais c’est mieux que de l’écrit noir sur fond blanc)
+
 # URL Github
 
 Lien du repos [GitHub](https://github.com/lucaschlm/twitch-tracker)
+
+# URL du site hébergé en ligne :
+
+[Site](https://twitchtracking.maximilienherr.web-edu.fr/)
