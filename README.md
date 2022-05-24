@@ -10,6 +10,7 @@
 - API en PHP, qui requête sur la BDD en MySQL, accessible via une URL du type : 
 
    • [https://twitchtracking.maximilienherr.web-edu.fr/index.php/streamerName/[NomStreamer]](https://twitchtracking.maximilienherr.web-edu.fr/index.php/streamerName/mynthos)
+   
    • [https://twitchtracking.maximilienherr.web-edu.fr/index.php/steamerDate/[MMAAAA]](https://twitchtracking.maximilienherr.web-edu.fr/index.php/streamerDate/052022)
    
 # Bonus tentés
