@@ -13,7 +13,7 @@
    
    • [https://twitchtracking.maximilienherr.web-edu.fr/index.php/steamerDate/[MMAAAA]](https://twitchtracking.maximilienherr.web-edu.fr/index.php/streamerDate/052022)
    
-- Sur ces deux pages, un script JS récupère les données envoyés en JSON par l'API pour ensuite faire les graphiques.
+- Sur statsstreamer et statsmensuelles, un script JS récupère les données envoyés en JSON par l'API pour ensuite faire et afficher les graphiques.
 # Bonus tentés
 
 - Réalisation du CSS (C’est pas la folie, mais c’est mieux que de l’écrit noir sur fond blanc)
