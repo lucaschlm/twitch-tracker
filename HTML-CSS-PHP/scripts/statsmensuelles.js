@@ -26,7 +26,7 @@ const config = {
 };
 
 const update = () => {
-    axios.get("http://localhost:3000/".concat(inputDate)) //On récupère l'api
+    axios.get("https://twitchtracking.maximilienherr.web-edu.fr/index.php/streamerDate/".concat(inputDate)) //On récupère l'api
       .then(function (response) {
         labels.push(inputDate);
     //////////////////////////////////////////
