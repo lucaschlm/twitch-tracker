@@ -5,7 +5,12 @@
   <meta charset="utf-8">
   <title>Twitch Tracking IUT</title>
   <link rel="stylesheet" href="./style.css">
+<<<<<<< HEAD:HTML-CSS/statsstreamer.html
+  
+
+=======
   <link rel="icon" href="./Ressources/logo IUT.ico">
+>>>>>>> main:HTML-CSS-PHP/statsstreamer.html
 </head>
 
 <body>
@@ -29,29 +34,33 @@
   </header>
 
   <div class="content">
-    <input class="searchbar" type="text" name="search" placeholder="Recherche ton streamer préféré ...">
+    <input id="searchStreamer" class="searchbar" type="text" name="search" placeholder="Recherche ton streamer préféré ...">
     <h1>Temps streamé (h)</h1>
-    <div class="graph"></div>
+    <canvas id="chartStreamedTime"></canvas>
     <h1>Viewers moyens</h1>
-    <div class="graph"></div>
+    <canvas id="chartAvgViewers"></canvas>
     <h1>Viewers maximum</h1>
-    <div class="graph"></div>
+    <canvas id="chartMaxViewers"></canvas>
     <h1>Heures vues</h1>
-    <div class="graph"></div>
+    <canvas id="chartViewedHours"></canvas>
     <h1>Followers</h1>
-    <div class="graph"></div>
+    <canvas id="chartFollowers"></canvas>
     <h1>Gain de followers</h1>
-    <div class="graph"></div>
+    <canvas id="chartFollowersGain"></canvas>
     <h1>Nombre de vues</h1>
-    <div class="graph"></div>
+    <canvas id="chartViews"></canvas>
     <h1>Rang</h1>
-    <div class="graph"></div>
+    <canvas id="chartRank"></canvas>
   </div>
   <!-- Section Footer -->
   <footer>
 
   </footer>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="scripts/statsstreamer.js"></script>
 
+  
 </body>
 
 </html>
