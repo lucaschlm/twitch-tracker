@@ -5,5 +5,13 @@
   "zerator": [
     { "date": "2022-05-12","minutes_streamed": 1500, "rank": 1, "avg_viewers": 50, "max_viewers": 150, "hours_watched": 200, "followers": 800, "views": 15000, "followers_total": 1200, "views_total": 18000 },
     { "date": "2022-06-12","minutes_streamed": 2600, "rank": 1, "avg_viewers": 60, "max_viewers": 650, "hours_watched": 500, "followers": 1100, "views": 18000, "followers_total": 1200, "views_total": 18000 }
+  ],
+  "052022": [
+    {"id":1,"name":"ANTOINE DANIEL","date":"2022-05-03 07:30:00","minutes_streamed":4553,"rank":112,"avg_viewers":16519,"max_viewers":51399,"hours_watched":1253510,"followers":23007,"views":783876,"followers_total":800033,"views_total":37264890,"streamer":1},
+    {"id":2,"name":"ZERATOR","date":"2022-05-03 07:30:49","minutes_streamed":9255,"rank":10,"avg_viewers":40663,"max_viewers":198810,"hours_watched":6272233,"followers":67562,"views":6036633,"followers_total":1416881,"views_total":1416881,"streamer":2},
+    {"id":3,"name":"MYNTHOS","date":"2022-05-03 07:32:24","minutes_streamed":10705,"rank":584,"avg_viewers":3414,"max_viewers":9541,"hours_watched":609118,"followers":8147,"views":455416,"followers_total":154643,"views_total":10426155,"streamer":5},
+    {"id":4,"name":"DOMINGO","date":"2022-05-03 07:34:46","minutes_streamed":5765,"rank":82,"avg_viewers":19864,"max_viewers":131914,"hours_watched":1908611,"followers":30639,"views":1172468,"followers_total":1398976,"views_total":121218348,"streamer":3},
+    {"id":5,"name":"PONCE","date":"2022-05-03 07:36:16","minutes_streamed":10467,"rank":99,"avg_viewers":13452,"max_viewers":59108,"hours_watched":2346631,"followers":27715,"views":1472998,"followers_total":737217,"views_total":60650679,"streamer":4},
+    {"id":6,"name":"KAMETO","date":"2022-05-03 07:36:57","minutes_streamed":11436,"rank":6,"avg_viewers":43009,"max_viewers":419458,"hours_watched":8197471,"followers":277054,"views":8672712,"followers_total":1387331,"views_total":108084562,"streamer":6}
   ]
 }
