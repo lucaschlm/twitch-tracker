@@ -4,111 +4,116 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: #18181B;
-
+    background-color: #18181b;
+    text-decoration: none;
+    font-family: Catamaran, sans-serif;
+    font-size: 2vh;
+    font-weight: 600;
 }
-
-/* Header */
 
 header {
     position: relative;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0% 55%;
+    background-position: 0 55%
 }
 
-/* Menu navigation */
-/* ====================================== */
 #logonav {
+    padding: 0 10vw
+}
+
+#logonav,
+.menu {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 0 10vw;
+    align-items: center
 }
 
 .menu {
     width: 75vw;
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     padding-left: 150px;
-    padding-top: 25px;
+    padding-top: 25px
 }
 
 .menu li {
-    list-style-type: none;
+    list-style-type: none
 }
 
 .menu a {
     text-decoration: none;
-    font-family: "Catamaran", sans-serif;
+    font-family: Catamaran, sans-serif;
     font-size: 3.5vh;
     font-weight: 600;
     color: #fff
 }
 
-/* Tableau de données/stats */
 main {
     border-radius: 5px 50px 30px 15px;
     margin: 0 10vw;
-    padding: 2vh 2vw;
-    background-color: #EB5D1B;
+    padding: 2vh 2vw
+}
+
+.titresTab,
+main {
+    background-color: #eb5d1b;
+    color: #fff;
 }
 
 .titresTab {
-    background-color: #EB5D1B;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: center
 }
 
 .titresTab li {
-    list-style-type: none;
+    list-style-type: none
 }
 
 .titresTab p {
-
-    background-color: #EB5D1B;
+    background-color: #eb5d1b;
     text-decoration: none;
-    font-family: "Catamaran", sans-serif;
+    font-family: Catamaran, sans-serif;
     font-size: 2vh;
     font-weight: 600;
     color: #fff
 }
 
 .content {
+    margin: 1vh 10vw
+}
+
+.content,
+.searchbar {
     width: 75vw;
-    padding: 1vh 1vw;
-    margin: 1vh 10vw;
+    padding: 1vh 1vw
 }
 
 .searchbar {
-    background-color: white;
-    width: 75vw;
-    padding: 1vh 1vw;
+    background-color: #fff;
     border-radius: 5px 50px 30px 15px;
     font-size: 2vh;
-    margin-bottom: 4vh;
+    margin-bottom: 4vh
 }
 
 h1 {
-    margin: 3vh 0 2vh 0;
-    color: white;
+    margin: 3vh 0 2vh;
+    color: #fff
 }
 
 h1:after {
     margin: 1vh 55vw 0 0;
-    content:' ';
-    display:block;
-    border:8px solid #EB5D1B;
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    -moz-border-radius:4px;
-    box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
-    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
-    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .05);
+    content: " ";
+    display: block;
+    border: 8px solid #eb5d1b;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05)
 }
 
+/*# sourceMappingURL=/style.37c5f0c6.css.map */
