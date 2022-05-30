@@ -7,7 +7,7 @@ let name = ""
 input.addEventListener("keypress", (e) => {
     if (e.key === 'Enter')
     {
-        name = input.value.toLowerCase();
+        name = input.value.toLowerCase().replace(/\s/g, '');
         update();
     }
   });
@@ -39,116 +39,133 @@ const update = () => {
       .then(function (response) {
     //////////////////////////////////////////
     //             TEMPS STREAME            //
-    //////////////////////////////////////////
-      labels.length = 0; // on vide le tableau des labels car on va le reremplir par la suite      
-      data.datasets[0].data.length = 0; // pareil pour les données         
+    //////////////////////////////////////////     
+      let dataTpsStreame = structuredClone(data);
+      let configTpsStreame = structuredClone(config);     
+      configTpsStreame.data = dataTpsStreame;
       console.log(response.data);
-      data.datasets[0].label = "Temps streamé"; //On change le label
+      dataTpsStreame.datasets[0].label = "Temps streamé"; //On change le label
       response.data.forEach(element => { //On parcourt toutes les valeurs (tous les mois du streamer)
         const date = new Date(element.date); //On transforme la date en format Date pour pouvoir la traiter facilement
         const dateFormat = dateList[date.getMonth()] + " " + date.getFullYear();
-        labels.push(dateFormat);
-        data.datasets[0].data.push(element.minutes_streamed / 60); //On change la valeur pour le graphique
+        dataTpsStreame.labels.push(dateFormat);
+        dataTpsStreame.datasets[0].data.push(element.minutes_streamed / 60); //On change la valeur pour le graphique
       });
-      const streamedTimeChart = new Chart(document.getElementById("chartStreamedTime"), config);
+      
+      console.log(configTpsStreame);
+      const streamedTimeChart = new Chart(document.getElementById("chartStreamedTime"), configTpsStreame);
     //////////////////////////////////////////
     //            VIEWERS MOYENS            //
     //////////////////////////////////////////
-      labels.length = 0; // on vide le tableau des labels car on va le reremplir par la suite              
-      data.datasets[0].data.length = 0; // pareil pour les données            
+        
+      let dataViewersMoyens = structuredClone(data);
+      let configViewersMoyens = structuredClone(config);
+      configViewersMoyens.data = dataViewersMoyens;             
       console.log(response.data);
-      data.datasets[0].label = "Viewers moyens"; //On change le label
+      dataViewersMoyens.datasets[0].label = "Viewers moyens"; //On change le label
       response.data.forEach(element => { //On parcourt toutes les valeurs (tous les mois du streamer)
         const date = new Date(element.date); //On transforme la date en format Date pour pouvoir la traiter facilement
         const dateFormat = dateList[date.getMonth()] + " " + date.getFullYear();
-        labels.push(dateFormat);
-        data.datasets[0].data.push(element.avg_viewers); //On change la valeur pour le graphique
+        dataViewersMoyens.labels.push(dateFormat);
+        dataViewersMoyens.datasets[0].data.push(element.avg_viewers); //On change la valeur pour le graphique
       });
-      const avgViewersChart = new Chart(document.getElementById("chartAvgViewers"), config);
+      const avgViewersChart = new Chart(document.getElementById("chartAvgViewers"), configViewersMoyens);
     //////////////////////////////////////////
     //             VIEWERS MAX              //
     //////////////////////////////////////////
-        labels.length = 0; // on vide le tableau des labels car on va le reremplir par la suite  
-        data.datasets[0].data.length = 0; // pareil pour les données         
+   
+        let dataViewersMax = structuredClone(data);
+        let configViewersMax = structuredClone(config);
+        configViewersMax.data = dataViewersMax;     
         console.log(response.data);
-        data.datasets[0].label = "Viewers max"; //On change le label
+        dataViewersMax.datasets[0].label = "Viewers max"; //On change le label
         response.data.forEach(element => { //On parcourt toutes les valeurs (tous les mois du streamer)
           const date = new Date(element.date); //On transforme la date en format Date pour pouvoir la traiter facilement
           const dateFormat = dateList[date.getMonth()] + " " + date.getFullYear();
-          labels.push(dateFormat);
-          data.datasets[0].data.push(element.max_viewers); //On change la valeur pour le graphique
+          dataViewersMax.labels.push(dateFormat);
+          dataViewersMax.datasets[0].data.push(element.max_viewers); //On change la valeur pour le graphique
         });
-        const maxViewersChart = new Chart(document.getElementById("chartMaxViewers"), config);
+        const maxViewersChart = new Chart(document.getElementById("chartMaxViewers"), configViewersMax);
     //////////////////////////////////////////
     //             HEURES VUES              //
     //////////////////////////////////////////
-        labels.length = 0; // on vide le tableau des labels car on va le reremplir par la suite  
-        data.datasets[0].data.length = 0; // pareil pour les données         
+    
+        let dataViewedHours = structuredClone(data);
+        let configViewedHours = structuredClone(config);
+        configViewedHours.data = dataViewedHours;    
         console.log(response.data);
-        data.datasets[0].label = "Heures vues"; //On change le label
+        dataViewedHours.datasets[0].label = "Heures vues"; //On change le label
         response.data.forEach(element => { //On parcourt toutes les valeurs (tous les mois du streamer)
           const date = new Date(element.date); //On transforme la date en format Date pour pouvoir la traiter facilement
           const dateFormat = dateList[date.getMonth()] + " " + date.getFullYear();
-          labels.push(dateFormat);
-          data.datasets[0].data.push(element.hours_watched); //On change la valeur pour le graphique
+          dataViewedHours.labels.push(dateFormat);
+          dataViewedHours.datasets[0].data.push(element.hours_watched); //On change la valeur pour le graphique
         });
-        const ViewedHoursChart = new Chart(document.getElementById("chartViewedHours"), config);
+        const ViewedHoursChart = new Chart(document.getElementById("chartViewedHours"), configViewedHours);
     //////////////////////////////////////////
     //              FOLLOWERS               //
     //////////////////////////////////////////
-        labels.length = 0; // on vide le tableau des labels car on va le reremplir par la suite  
-        data.datasets[0].data.length = 0; // pareil pour les données         
+  
+        let dataFollowers = structuredClone(data);
+        let configFollowers = structuredClone(config);
+        configFollowers.data = dataFollowers;     
         console.log(response.data);
-        data.datasets[0].label = "Followers"; //On change le label
+        dataFollowers.datasets[0].label = "Followers"; //On change le label
         response.data.forEach(element => { //On parcourt toutes les valeurs (tous les mois du streamer)
           const date = new Date(element.date); //On transforme la date en format Date pour pouvoir la traiter facilement
           const dateFormat = dateList[date.getMonth()] + " " + date.getFullYear();
-          labels.push(dateFormat);
-          data.datasets[0].data.push(element.followers_total); //On change la valeur pour le graphique
+          dataFollowers.labels.push(dateFormat);
+          dataFollowers.datasets[0].data.push(element.followers_total); //On change la valeur pour le graphique
         });
-        const FollowersChart = new Chart(document.getElementById("chartFollowers"), config);
+        const FollowersChart = new Chart(document.getElementById("chartFollowers"), configFollowers);
     //////////////////////////////////////////
     //           FOLLOWERS GAGNES           //
     //////////////////////////////////////////
-        labels.length = 0; // on vide le tableau des labels car on va le reremplir par la suite  
-        data.datasets[0].data.length = 0; // pareil pour les données         
+
+        let dataFollowersGain = structuredClone(data);
+        let configFollowersGain = structuredClone(config);
+        configFollowersGain.data = dataFollowersGain;        
         console.log(response.data);
-        data.datasets[0].label = "Followers Gagnés"; //On change le label
+        dataFollowersGain.datasets[0].label = "Followers Gagnés"; //On change le label
         response.data.forEach(element => { //On parcourt toutes les valeurs (tous les mois du streamer)
           const date = new Date(element.date); //On transforme la date en format Date pour pouvoir la traiter facilement
           const dateFormat = dateList[date.getMonth()] + " " + date.getFullYear();
-          labels.push(dateFormat);
-          data.datasets[0].data.push(element.followers); //On change la valeur pour le graphique
+          dataFollowersGain.labels.push(dateFormat);
+          dataFollowersGain.datasets[0].data.push(element.followers); //On change la valeur pour le graphique
         });
-        const FollowersGainChart = new Chart(document.getElementById("chartFollowersGain"), config);
+        const FollowersGainChart = new Chart(document.getElementById("chartFollowersGain"), configFollowersGain);
     //////////////////////////////////////////
     //                 VUES                 //
     //////////////////////////////////////////
-        labels.length = 0; // on vide le tableau des labels car on va le reremplir par la suite  
-        data.datasets[0].data.length = 0; // pareil pour les données         
+   
+        let dataViews = structuredClone(data);
+        let configViews = structuredClone(config);
+        configViews.data = dataViews;       
         console.log(response.data);
-        data.datasets[0].label = "Nombre de vues"; //On change le label
+        dataViews.datasets[0].label = "Nombre de vues"; //On change le label
         response.data.forEach(element => { //On parcourt toutes les valeurs (tous les mois du streamer)
           const date = new Date(element.date); //On transforme la date en format Date pour pouvoir la traiter facilement
           const dateFormat = dateList[date.getMonth()] + " " + date.getFullYear();
-          labels.push(dateFormat);
-          data.datasets[0].data.push(element.views); //On change la valeur pour le graphique
+          dataViews.labels.push(dateFormat);
+          dataViews.datasets[0].data.push(element.views); //On change la valeur pour le graphique
         });
-        const ViewsChart = new Chart(document.getElementById("chartViews"), config);
+        const ViewsChart = new Chart(document.getElementById("chartViews"), configViews);
     //////////////////////////////////////////
     //                 RANK                 //
     //////////////////////////////////////////
-        labels.length = 0; // on vide le tableau des labels car on va le reremplir par la suite  
-        data.datasets[0].data.length = 0; // pareil pour les données         
+
+        let dataRank = structuredClone(data);
+        let configRank = structuredClone(config);
+        configRank.data = dataRank;         
         console.log(response.data);
-        data.datasets[0].label = "Nombre de vues"; //On change le label
+        dataRank.datasets[0].label = "Nombre de vues"; //On change le label
         response.data.forEach(element => { //On parcourt toutes les valeurs (tous les mois du streamer)
           const date = new Date(element.date); //On transforme la date en format Date pour pouvoir la traiter facilement
           const dateFormat = dateList[date.getMonth()] + " " + date.getFullYear();
-          labels.push(dateFormat);
-          data.datasets[0].data.push(element.rank); //On change la valeur pour le graphique
+          dataRank.labels.push(dateFormat);
+          dataRank.datasets[0].data.push(element.rank); //On change la valeur pour le graphique
         });
-        const RankChart = new Chart(document.getElementById("chartRank"), config);
+        const RankChart = new Chart(document.getElementById("chartRank"), configRank);
     })
       .catch(function (error) {
         // handle error
