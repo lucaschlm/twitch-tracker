@@ -4,8 +4,11 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: #18181B;
-
+    background-color: #18181b;
+    text-decoration: none;
+    font-family: Catamaran, sans-serif;
+    font-size: 2vh;
+    font-weight: 600;
 }
 
 /* Header */
