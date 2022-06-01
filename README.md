@@ -49,4 +49,4 @@ Lien du repos [GitHub](https://github.com/lucaschlm/twitch-tracker)
 
 ## URL du site hébergé en ligne
 
-[Site](https://twitchtracking.maximilienherr.web-edu.fr/)
+Vous trouverez le site en ligne ici : [Site](https://twitchtracking.maximilienherr.web-edu.fr/)
