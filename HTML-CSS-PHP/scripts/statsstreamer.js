@@ -178,7 +178,10 @@ const update = () => {
     })
       .catch(function (error) {
         // handle error
-        console.log(error);
+        if (error.response.status == 404)
+        {
+          alert("Streamer introuvable");
+        }
       })
       .then(function () {
         // always executed
