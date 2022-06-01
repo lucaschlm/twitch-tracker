@@ -1,5 +1,7 @@
 # Twitch Tracker
 
+## Présentation du projet
+
 Twitch Tracker est un projet WEB permettant d'afficher les statistiques de différents streamers de la plateforme [Twitch](https://www.twitch.tv/). Ce projet a été réalisé dans le cadre de notre formation d'informatique (BUT) du Puy-en-Velay. 
 L'objectif était de récupérer des données d'une base de donnée MySQL, puis de les traiter dans un site WEB.
 Pour ce faire, nous avons utilisé différentes technologies :
