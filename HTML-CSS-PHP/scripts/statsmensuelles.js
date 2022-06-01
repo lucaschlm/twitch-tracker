@@ -25,15 +25,36 @@ const config = {
   options: {}
 };
 
+let configTpsStreame = structuredClone(config);
+let configViewersMoyens = structuredClone(config);
+let configViewersMax = structuredClone(config);
+let configViewedHours = structuredClone(config);
+let configFollowers = structuredClone(config);
+let configFollowersGain = structuredClone(config);
+let configViews = structuredClone(config);
+let configRank = structuredClone(config);
+
+const streamedTimeChart = new Chart(document.getElementById("chartStreamedTime"), configTpsStreame);
+const streamedAvgViewers = new Chart(document.getElementById("chartAvgViewers"), configViewersMoyens);
+const maxViewersChart = new Chart(document.getElementById("chartMaxViewers"), configViewersMax);
+const ViewedHoursChart = new Chart(document.getElementById("chartViewedHours"), configViewedHours);
+const FollowersChart = new Chart(document.getElementById("chartFollowers"), configFollowers);
+const FollowersGainChart = new Chart(document.getElementById("chartFollowersGain"), configFollowersGain);
+const ViewsChart = new Chart(document.getElementById("chartViews"), configViews);
+const RankChart = new Chart(document.getElementById("chartRank"), configRank);
+
+
 const update = () => {
-    axios.get("https://twitchtracking.maximilienherr.web-edu.fr/index.php/streamerDate/".concat(inputDate)) //On récupère l'api
+    axios.get("https://twitchtracking.maximilienherr.web-edu.fr/index.php/steamerDate/".concat(inputDate)) //On récupère l'api
       .then(function (response) {
+        labels = []; //On vide les labels (dans le cas où il a déjà été utilisé)
+        data.datasets = []; //Pareil pour les datas
+        data.labels = labels;
         labels.push(inputDate);
     //////////////////////////////////////////
     //             TEMPS STREAME            //
     //////////////////////////////////////////    
       let dataTpsStreame = structuredClone(data);
-      let configTpsStreame = structuredClone(config);
       configTpsStreame.data = dataTpsStreame;     
       response.data.forEach(element => { //On parcourt toutes les valeurs (tous les streamers)
         dataTpsStreame.datasets.push({
@@ -43,12 +64,11 @@ const update = () => {
           data: [element.minutes_streamed / 60]
         });
       });
-      const streamedTimeChart = new Chart(document.getElementById("chartStreamedTime"), configTpsStreame);
+      streamedTimeChart.update();
     //////////////////////////////////////////
     //            VIEWERS MOYENS            //
     //////////////////////////////////////////
     let dataViewersMoyens = structuredClone(data);
-    let configViewersMoyens = structuredClone(config);
     configViewersMoyens.data = dataViewersMoyens;     
     response.data.forEach(element => { //On parcourt toutes les valeurs (tous les streamers)
       dataViewersMoyens.datasets.push({
@@ -58,12 +78,11 @@ const update = () => {
         data: [element.avg_viewers]
       });
     });
-    const streamedAvgViewers = new Chart(document.getElementById("chartAvgViewers"), configViewersMoyens);
+    streamedAvgViewers.update();
     //////////////////////////////////////////
     //             VIEWERS MAX              //
     //////////////////////////////////////////
     let dataViewersMax = structuredClone(data);
-    let configViewersMax = structuredClone(config);
     configViewersMax.data = dataViewersMax;     
     response.data.forEach(element => { //On parcourt toutes les valeurs (tous les streamers)
       dataViewersMax.datasets.push({
@@ -73,12 +92,11 @@ const update = () => {
         data: [element.max_viewers]
       });
     });
-    const maxViewersChart = new Chart(document.getElementById("chartMaxViewers"), configViewersMax);
+    maxViewersChart.update();
     //////////////////////////////////////////
     //             HEURES VUES              //
     //////////////////////////////////////////
     let dataViewedHours = structuredClone(data);
-    let configViewedHours = structuredClone(config);
     configViewedHours.data = dataViewedHours;     
     response.data.forEach(element => { //On parcourt toutes les valeurs (tous les streamers)
       dataViewedHours.datasets.push({
@@ -88,12 +106,11 @@ const update = () => {
         data: [element.hours_watched]
       });
     });
-    const ViewedHoursChart = new Chart(document.getElementById("chartViewedHours"), configViewedHours);
+    ViewedHoursChart.update();
     //////////////////////////////////////////
     //              FOLLOWERS               //
     //////////////////////////////////////////
     let dataFollowers = structuredClone(data);
-    let configFollowers = structuredClone(config);
     configFollowers.data = dataFollowers;     
     response.data.forEach(element => { //On parcourt toutes les valeurs (tous les streamers)
       dataFollowers.datasets.push({
@@ -103,12 +120,11 @@ const update = () => {
         data: [element.followers_total]
       });
     });
-    const FollowersChart = new Chart(document.getElementById("chartFollowers"), configFollowers);
+    FollowersChart.update();
     //////////////////////////////////////////
     //           FOLLOWERS GAGNES           //
     //////////////////////////////////////////
     let dataFollowersGain = structuredClone(data);
-    let configFollowersGain = structuredClone(config);
     configFollowersGain.data = dataFollowersGain;     
     response.data.forEach(element => { //On parcourt toutes les valeurs (tous les streamers)
       dataFollowersGain.datasets.push({
@@ -118,12 +134,11 @@ const update = () => {
         data: [element.followers]
       });
     });
-    const FollowersGainChart = new Chart(document.getElementById("chartFollowersGain"), configFollowersGain);
+    FollowersGainChart.update();
     //////////////////////////////////////////
     //                 VUES                 //
     //////////////////////////////////////////
     let dataViews = structuredClone(data);
-    let configViews = structuredClone(config);
     configViews.data = dataViews;     
     response.data.forEach(element => { //On parcourt toutes les valeurs (tous les streamers)
       dataViews.datasets.push({
@@ -133,12 +148,11 @@ const update = () => {
         data: [element.views]
       });
     });
-      const ViewsChart = new Chart(document.getElementById("chartViews"), configViews);
+    ViewsChart.update();
     //////////////////////////////////////////
     //                 RANK                 //
     //////////////////////////////////////////
     let dataRank = structuredClone(data);
-    let configRank = structuredClone(config);
     configRank.data = dataRank;     
     response.data.forEach(element => { //On parcourt toutes les valeurs (tous les streamers)
       dataRank.datasets.push({
@@ -148,7 +162,7 @@ const update = () => {
         data: [element.rank]
       });
     });
-        const RankChart = new Chart(document.getElementById("chartRank"), configRank);
+    RankChart.update();
     })
       .catch(function (error) {
         // handle error
