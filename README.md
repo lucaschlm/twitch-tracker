@@ -1,9 +1,11 @@
-﻿# Participants du projet
+# Twitch Tracker
+
+## Participants du projet
 - CHALMANDRIER Lucas
 - MURE Florian
 - HERR Maximilien
 
-# Fonctionnalités réalisées
+## Fonctionnalités réalisées
 
 - Réalisation des maquettes sur Affinity Designer pour la partie template de nos pages HTML/CSS
 - HTML des trois pages (home page, stats streamer et stats mensuelles)
@@ -16,17 +18,18 @@
 - Sur statsstreamer et statsmensuelles, un script JS récupère les données envoyés en JSON par l'API pour ensuite faire et afficher les graphiques.
 - Sur les stats mensuelles, on peut afficher et désafficher les données d'un streamer en particulier.
 - Et les stats streamer nous permettent donc de voir les données sur plusieurs mois d'un stramer en particulier
-# Bonus tentés
+
+## Bonus tentés
 
 - Réalisation du CSS (C’est pas la folie, mais c’est mieux que de l’écrit noir sur fond blanc)
 
-# URL Github
+## URL Github
 
 Lien du repos [GitHub](https://github.com/lucaschlm/twitch-tracker)
 
-# URL vers une archive
+## URL vers une archive
 
 
-# URL du site hébergé en ligne
+## URL du site hébergé en ligne
 
 [Site](https://twitchtracking.maximilienherr.web-edu.fr/)
