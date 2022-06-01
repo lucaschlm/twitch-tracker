@@ -8,8 +8,12 @@ Pour ce faire, nous avons utilisé différentes technologies :
 - **JavaScript** pour traiter les données et afficher des graphiques en conséquence (en utilisant **NodeJS**)
    - **Axios** pour les requettes HTTP
    - **Chart.js** pour les graphiques
+- **[json-server](https://github.com/typicode/json-server)** pour créer une fausse API avec un fichier json (utile lors de la conception, lorsque les données n'étaient pas encore exploitables par le js)
 
+## Lancer le projet
 
+- Dans le dossier **HTML-CSS-PHP**, lancer un `npm start`
+- Possibilité de lancer la fausse API situé dans le dossier racine pour avoir des données accessibles en local (voir le [github](https://github.com/typicode/json-server) pour savoir comment lancer la fausse API)
 
 ## Participants du projet
 - CHALMANDRIER Lucas
