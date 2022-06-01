@@ -166,8 +166,10 @@ const update = () => {
     })
       .catch(function (error) {
         // handle error
-        console.log(error);
-        // window.location.href = "http://localhost:1234/homepage.html ";
+        if (error.response.status == 404)
+        {
+          alert("Date introuvable (pensez à vérifier le format");
+        }
       })
       .then(function () {
         // always executed
