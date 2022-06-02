@@ -45,7 +45,7 @@ const RankChart = new Chart(document.getElementById("chartRank"), configRank);
 
 
 const update = () => {
-    axios.get("https://twitchtracking.maximilienherr.web-edu.fr/index.php/steamerDate/".concat(inputDate)) //On récupère l'api
+    axios.get("https://twitchtracking.maximilienherr.web-edu.fr/index.php/streamerDate/".concat(inputDate)) //On récupère l'api
       .then(function (response) {
         labels = []; //On vide les labels (dans le cas où il a déjà été utilisé)
         data.datasets = []; //Pareil pour les datas
