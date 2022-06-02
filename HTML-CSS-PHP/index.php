@@ -12,7 +12,7 @@ if ((isset($uri[2]) && $uri[2] != 'streamerName' && $uri[2] != 'streamerDate') |
 }
 
 
-include __DIR__ . "/Controller/Api/StreamerController.php";
+include __DIR__ . "/controller/api/StreamerController.php";
 
 $objFeedController = new StreamerController();
 if ($uri[2] == 'streamerName') {
