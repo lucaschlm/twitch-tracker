@@ -44,8 +44,6 @@ Pour ce faire, nous avons utilisé différentes technologies :
 
 Lien du repos [GitHub](https://github.com/lucaschlm/twitch-tracker)
 
-## URL vers une archive
-
 
 ## URL du site hébergé en ligne
 
