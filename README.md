@@ -30,7 +30,7 @@ Pour ce faire, nous avons utilisé différentes technologies :
 
    • [https://twitchtracking.maximilienherr.web-edu.fr/index.php/streamerName/[NomStreamer]](https://twitchtracking.maximilienherr.web-edu.fr/index.php/streamerName/mynthos)
    
-   • [https://twitchtracking.maximilienherr.web-edu.fr/index.php/steamerDate/[MMAAAA]](https://twitchtracking.maximilienherr.web-edu.fr/index.php/streamerDate/052022)
+   • [https://twitchtracking.maximilienherr.web-edu.fr/index.php/streamerDate/[MMAAAA]](https://twitchtracking.maximilienherr.web-edu.fr/index.php/streamerDate/052022)
    
 - Sur statsstreamer et statsmensuelles, un script JS récupère les données envoyés en JSON par l'API pour ensuite faire et afficher les graphiques.
 - Sur les stats mensuelles, on peut afficher et désafficher les données d'un streamer en particulier.
